@@ -1,0 +1,18 @@
+
+#Define o stacktrace que sera mostrado no front
+server:
+  error:
+    include-stacktrace: on_param
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=Anime
+    username: sa
+    password: 56535450123bB#
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    show-sql: true
