@@ -36,11 +36,10 @@ public class AnimeController {
 
     //@RequestMapping(method = RequestMethod.GET, path = "/list")
     @GetMapping
-    public ResponseEntity<Page<Anime>> list(Pageable pageable){
+    public ResponseEntity<List<Anime>> list(){
         log.info(dateUtil.formatLocalDateTimeToDatebaseStyle(LocalDateTime.now()));
-        return new ResponseEntity<>(animeService.listAll(pageable), HttpStatus.OK);
+        return new ResponseEntity<>(animeService.listAll(), HttpStatus.OK);
     }
-
 
     @GetMapping(path = "/{id}")
     public ResponseEntity<Anime> findById(@PathVariable Long id){
