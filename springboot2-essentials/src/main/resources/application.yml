@@ -15,4 +15,10 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     database-platform: org.hibernate.dialect.SQLServerDialect
-    show-sql: true
+
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
